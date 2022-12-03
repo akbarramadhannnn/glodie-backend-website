@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { getWebsiteByMenuName } = require("../../../controllers/website");
-const { getToken } = require("../../../middleware/auth");
 
-router.get("/:menuName", getToken, getWebsiteByMenuName);
+router.get("/:menuName", getWebsiteByMenuName);
 
 module.exports = router;
